@@ -1,0 +1,146 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+body {
+	height: 100%;
+}
+
+/* Global css*/
+.container {
+	padding: 1% 2% 1%;
+}
+
+.grid {
+	display: grid;
+	grid-template-areas: "nav main main";
+}
+
+nav {
+	line-height: 1.5;
+	grid-area: nav;
+	padding: 1.5% 0;
+	height: 100%;
+	border-right: 4px solid rgb(156, 149, 149);
+}
+
+nav .nav-title {
+	text-align: center;
+	font-size: 1.8rem;
+	padding: 3%;
+	font-style: "Open Sans", Arial, sans-serif;
+}
+
+nav ol li {
+	list-style-type: none;
+	font-size: 1.2rem;
+	/* padding: top right/left bottom; */
+	padding: 10px 35px 10px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+nav ol li a {
+	color: black;
+	text-decoration: none;
+}
+
+main {
+	grid-area: main;
+	line-height: 2.5;
+}
+
+@media (max-width: 768px) {
+	.grid {
+		grid-template-areas:
+			"nav nav nav"
+			"main main main";
+	}
+
+	nav .nav-content {
+		max-height: 200px;
+		overflow: scroll;
+		overflow-y: scroll;
+		border: 3px solid black;
+	}
+
+	main {
+		padding: 0 2%;
+	}
+}
+
+@media (min-width: 768px) {
+	main {
+		padding-left: 360px;
+	}
+
+	nav {
+		grid-area: nav;
+		position: fixed;
+		left: 0;
+	}
+}
+
+.main-section ul {
+	padding-left: 70px;
+}
+
+@media (max-width: 768px) {
+	.main-section ul {
+		padding-left: 40px;
+	}
+}
+.main-section header {
+	font-size: 1.75rem;
+	color: black;
+}
+
+.main-section {
+	color: #4d4e53;
+}
+
+code {
+	display: block;
+	text-align: left;
+	white-space: pre-line;
+	position: relative;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 2;
+	background-color: #f7f7f7;
+	padding: 15px;
+	margin: 10px;
+	border-radius: 5px;
+	font-size: 0.85rem;
+}
+
+a {
+	transition: 0.1s;
+}
+
+a:hover {
+	color: #5a9cf1;
+}
